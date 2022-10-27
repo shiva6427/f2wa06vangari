@@ -3,26 +3,26 @@ var router = express.Router();
 
 /* GET computation page. */
 router.get('/', function (req, res, next) {
-  var s;
+  var x;
   
   var random = Math.random();
-  console.log(req.query.s);
-  s = req.query.s;
+  console.log(req.query.x);
+  x = req.query.x;
 
   // checking if url has params
-  if (s == undefined) {
-    s = random.toFixed(2);
+  if (x == undefined) {
+    x = random.toFixed(2);
   }
   
-  let Tan = Math.atan(s).toFixed(2)  
-  let Exp = Math.exp(s).toFixed(2)
-  let Expm = Math.expm1(s).toFixed(2)
+  let Tan = Math.atan(x).toFixed(2)  
+  let Exp = Math.exp(x).toFixed(2)
+  let Expm = Math.expm1(x).toFixed(2)
  
   res.render('computation', {
     title: 'Computation',
-    Calculate: 'applied to ' + s  + ' is ' + Tan,
-    c1: 'applied to ' + s + ' is ' + Exp,
-    c2: 'applied to ' + s + ' is ' + Expm,
+    x1: 'applied to ' + x  + ' is ' + Tan,
+    x2: 'applied to ' + x + ' is ' + Exp,
+    x3: 'applied to ' + x + ' is ' + Expm,
     
   });
 });
