@@ -20,9 +20,9 @@ router.get('/', function (req, res, next) {
  
   res.render('computation', {
     title: 'Computation',
-    Calculate: `applied to ` + s  + ` is ` + Tan,
-    c1: `applied to ` + s + ` is ` + Exp,
-    c2: `applied to ` + s + ` is ` + Expm,
+    Calculate: 'applied to ' + s  + ' is ' + Tan,
+    c1: 'applied to ' + s + ' is ' + Exp,
+    c2: 'applied to ' + s + ' is ' + Expm,
     
   });
 });
