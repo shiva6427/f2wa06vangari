@@ -7,7 +7,7 @@ router.get('/', function (req, res, next) {
   
   var random = Math.random();
   console.log(req.query.s);
-  x = req.query.s;
+  s = req.query.s;
 
   // checking if url has params
   if (s == undefined) {
